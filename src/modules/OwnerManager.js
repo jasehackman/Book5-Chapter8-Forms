@@ -1,7 +1,7 @@
 import APIManager from "./apiCalls"
 
 class OwnerManager extends APIManager {
-  getAnimals(id) {
+  getOwners(id) {
     return this.get("owners", id)
   }
 
@@ -12,6 +12,11 @@ class OwnerManager extends APIManager {
   removeOwners(id){
     return this.deleteAndGrag("owners", id)
   }
+
+  postOwners(newObj){
+    return this.post("owners", newObj)
+  }
+
 }
 
 export default new OwnerManager();

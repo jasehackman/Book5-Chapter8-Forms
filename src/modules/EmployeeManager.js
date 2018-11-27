@@ -12,6 +12,9 @@ class EmployeeManager extends APIManager {
   removeEmployees(id){
     return this.deleteAndGrag("employees", id)
   }
+  postEmployees(newObj){
+    return this.post("employees", newObj)
+  }
 }
 
 export default new EmployeeManager();
